@@ -3,7 +3,7 @@
 	"version": "0.1.0-ts.0",
 	"description": "Typings for Kampfkarren/ultimate-list",
 	"repository": "github:jackTabsCode/ultimate-list#rbxts",
-	"main": "out/init.lua",
+	"main": "out/init.luau",
 	"license": "MPL-2.0",
 	"types": "out/index.d.ts",
 	"files": [
