@@ -3,7 +3,7 @@ local Src = script:FindFirstAncestor("UltimateList")
 
 local DataSources = require(Src.DataSources)
 local Dimensions = require(Src.Dimensions)
-local React = require(Src.Parent.React)
+local React = require(Src.Parent.react)
 local ReactBindingsRenderer = require(Src.Renderers.ReactBindingsRenderer)
 local ReactStateRenderer = require(Src.Renderers.ReactStateRenderer)
 local Renderers = require(Src.Renderers)

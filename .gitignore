@@ -4,3 +4,5 @@ DevPackages/
 Packages/
 sourcemap.json
 node_modules/
+*.tgz
+out/

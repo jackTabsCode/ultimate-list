@@ -1,6 +1,6 @@
 local Src = script:FindFirstAncestor("UltimateList")
 
-local React = require(Src.Parent.React)
+local React = require(Src.Parent.react)
 
 local Renderers = {}
 

@@ -1,6 +1,6 @@
 local Src = script:FindFirstAncestor("UltimateList")
 
-local React = require(Src.Parent.React)
+local React = require(Src.Parent.react)
 
 -- A version of React.joinBindings(data):map(fn) that preserves types.
 local function joinAndMapBindings<Ret, T1, T2, T3>(

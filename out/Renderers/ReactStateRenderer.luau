@@ -2,7 +2,7 @@ local Src = script:FindFirstAncestor("UltimateList")
 
 local Dimensions = require(Src.Dimensions)
 local DimensionsMethods = require(Src.Dimensions.DimensionsMethods)
-local React = require(Src.Parent.React)
+local React = require(Src.Parent.react)
 local adjustPositionToScrollAxis = require(Src.Dimensions.adjustPositionToScrollAxis)
 local createVirtualizedListController = require(Src.createVirtualizedListController)
 local joinAndMapBindings = require(Src.Util.joinAndMapBindings)

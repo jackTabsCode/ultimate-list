@@ -22,23 +22,26 @@ interface Props<T> {
 	native?: Omit<
 		React.InstanceProps<ScrollingFrame>,
 		"Size" | "CanvasSize" | "Change" | "Tag" | "ref"
-	> &
-		Omit<
+	> & {
+		Change?: Omit<
 			React.InstanceChangeEvent<ScrollingFrame>,
 			"AbsoluteWindowSize" | "CanvasPosition"
 		>;
+	};
 
 	/** A function that will return a unique key for a given item. By default UltimateList will use the index, but you will want to specify this if your list is not append-only. */
-	getKey: (value: T, index: number) => string;
+	getKey?: (value: T, index: number) => string;
 
 	/** A ref to the underlying ScrollingFrame. Note that the actual contents are stored in a separate frame that you cannot access. */
-	scrollingFrameRef: React.Ref<ScrollingFrame>;
+	scrollingFrameRef?: React.Ref<ScrollingFrame>;
 
 	/** A callback that will run when the [window size of the ScrollingFrame changes](https://create.roblox.com/docs/reference/engine/classes/ScrollingFrame#AbsoluteWindowSize). */
-	onAbsoluteWindowSizeChanged: (newWindowSize: Vector2) => void;
+	onAbsoluteWindowSizeChanged?: (newWindowSize: Vector2) => void;
 
 	/** A callback that will run when the ScrollingFrame changes CanvasPosition. The number provided is the position of the dominant axis--so in a vertical list, it represents `CanvasPosition.Y`. */
-	onScrollAxisChanged: (newScrollAxis: number) => void;
+	onScrollAxisChanged?: (newScrollAxis: number) => void;
 }
 
 declare const ScrollingFrame: <T>(props: Props<T>) => React.Element;
+
+export = ScrollingFrame;

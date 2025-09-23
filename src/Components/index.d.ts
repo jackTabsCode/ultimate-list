@@ -1,9 +1,7 @@
-import type { ScrollingFrame as UltimateScrollingFrame } from "./ScrollingFrame";
+import type UltimateScrollingFrame from "./ScrollingFrame";
 
-interface Components {
+declare const Components: {
 	ScrollingFrame: typeof UltimateScrollingFrame;
-}
-
-declare const Components: Components;
+};
 
 export = Components;
