@@ -1,0 +1,24 @@
+{
+	"name": "@rbxts/ultimate-list",
+	"version": "0.1.0-ts.0",
+	"description": "Typings for Kampfkarren/ultimate-list",
+	"repository": "github:jackTabsCode/ultimate-list#rbxts",
+	"main": "out/init.lua",
+	"license": "MPL-2.0",
+	"types": "out/index.d.ts",
+	"files": [
+		"out",
+		"!**/*.tsbuildinfo"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"devDependencies": {
+		"@rbxts/compiler-types": "^3.0.0-types.0",
+		"@rbxts/types": "^1.0.882",
+		"roblox-ts": "^3.0.0"
+	},
+	"peerDependencies": {
+		"@rbxts/react": "*"
+	}
+}

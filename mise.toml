@@ -1,0 +1,8 @@
+[env]
+_.path = ["{{config_root}}/node_modules/.bin"]
+
+[tools]
+node = "latest"
+
+[tasks.build]
+run = "rbxtsc --verbose"

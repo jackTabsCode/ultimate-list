@@ -1,8 +1,6 @@
 {
 	"name": "tests",
-	"servePlaceIds": [
-		0
-	],
+	"servePlaceIds": [0],
 	"tree": {
 		"$className": "DataModel",
 		"ReplicatedStorage": {
