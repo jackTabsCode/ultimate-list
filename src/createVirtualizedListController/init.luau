@@ -65,7 +65,6 @@ local function createVirtualizedListController<T>(
 	local function getIndexRangeInViewForUDim2(udim2: UDim2): Vector3
 		-- Amount per row if we're Y direction,
 		-- amount per column if we're X.
-		print(udim2.Y.Scale)
 		local amountPerNonDominant = if direction == "x"
 			then 1 // udim2.Y.Scale
 			elseif direction == "y" then 1 // udim2.X.Scale
