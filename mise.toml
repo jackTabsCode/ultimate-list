@@ -6,3 +6,7 @@ node = "latest"
 
 [tasks.build]
 run = ["rbxtsc --verbose", "npm pack"]
+
+[tasks.publish]
+run = "npm publish"
+depends = ["build"]
