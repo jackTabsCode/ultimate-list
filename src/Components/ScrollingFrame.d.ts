@@ -1,7 +1,7 @@
-import type { DataSource } from "DataSources/types";
-import type { Dimensions } from "Dimensions/types";
-import type { Renderer } from "Renderers/types";
 import type React from "@rbxts/react";
+import type { DataSource } from "../DataSources/types";
+import type { Dimensions } from "../Dimensions/types";
+import type { Renderer } from "../Renderers/types";
 
 interface Props<T> {
 	/** The [data source](https://kampfkarren.github.io/ultimate-list/core-concepts/data-sources) we are creating a list for. */
