@@ -4,9 +4,13 @@ _.path = ["{{config_root}}/node_modules/.bin"]
 [tools]
 node = "latest"
 
+[tasks.install]
+run = "npm install"
+
 [tasks.build]
 run = ["rbxtsc --verbose", "npm pack"]
+depends = ["install"]
 
 [tasks.publish]
-run = "npm publish"
+run = "npm publish --tag latest"
 depends = ["build"]
