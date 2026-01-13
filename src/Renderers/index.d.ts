@@ -7,8 +7,18 @@ declare const Renderers: {
 	 * Takes a callback that turns a direct value into a React node. When the user scrolls, we will trigger a re-render and call that callback again. When an item is no longer visible, it is unmounted--elements are not reused for different items.
 	 *
 	 * See also ["State" section on the renderers documentation](https://kampfkarren.github.io/ultimate-list/core-concepts/renderers#state).
+	 *
+	 * The optional configuration table allows you to customize the behavior of the rendering.
 	 */
-	byState: <T>(callback: (value: T) => React.ReactNode) => Renderer<T>;
+	byState: <T>(
+		callback: (value: T) => React.ReactNode,
+		config?: {
+			/**
+			 * Internally, the state renderer does not actually place its contents inside the ScrollingFrame--it places them in an overlay view that moves alongside the scrolling. When this option is enabled, that view will only move once everything completes rendering, leading to the contents always looking how you expect. However, this may cause visible lag if the components are expensive to render. Disabling this will make the scrolling smoother, but will allow for empty space to show up while React renders your UI.
+			 */
+			freezeViewWhileScrolling?: boolean;
+		},
+	) => Renderer<T>;
 
 	/**
 	 * Takes a callback that provides a React node based on the provided binding. When the user scrolls, these elements will be re-used, and the binding will be updated directly. This means as the user scrolls, there will be zero React re-renders. The value you get will be nil if there is no item occupying that space.
